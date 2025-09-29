@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.heroandbombs.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.heroandbombs.HelloController">
+    <children>
+        <ImageView fx:id="forest1" fitHeight="400.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/forest.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="forest2" fitHeight="400.0" fitWidth="800.0" layoutX="800.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/forest.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="hero" fitHeight="100.0" fitWidth="120.0" layoutX="36.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/hero.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="bomb" fitHeight="45.0" fitWidth="45.0" layoutX="823.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/bomb.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="pause" focusTraversable="false" layoutX="315.0" layoutY="145.0" text="Pause" textFill="#060ccf" visible="false">
+            <font>
+                <Font name="Noto Sans Kaithi Regular" size="60.0" />
+            </font>
+        </Label>
+        <Label fx:id="lose" focusTraversable="false" layoutX="270.0" layoutY="113.0" text="Lose !" textFill="#ee0000" visible="false">
+            <font>
+                <Font name="Noto Sans Kaithi Regular" size="96.0" />
+            </font>
+        </Label>
+        <Button fx:id="restart" focusTraversable="false" layoutX="349.0" layoutY="313.0" mnemonicParsing="false" onAction="#restartGame" text="Restart" textFill="#350af5" visible="false">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Button>
+        <Button fx:id="exit" focusTraversable="false" layoutX="758.0" mnemonicParsing="false" onAction="#exit" prefHeight="21.0" prefWidth="42.0" text="Exit">
+            <font>
+                <Font name="Noto Sans Mahajani Regular" size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
